@@ -6,12 +6,13 @@ package desingera;
 
 /**
  *
- * @author dam2
+ * @author Daniela
  */
 public class Vista_DesingEra extends javax.swing.JFrame {
 
     /**
      * Creates new form Vista_DesingEra
+     * Es el método vista del proyecto
      */
     public Vista_DesingEra() {
         initComponents();
