@@ -8,7 +8,7 @@ package desingera;
  *
  * @author Daniela
  */
-public class Modelo_DesingEra {
+public class ModeloInterno_DesingEra {
     /**
      * Es el método secundario del proyecto
      * 

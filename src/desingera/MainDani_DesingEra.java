@@ -8,7 +8,7 @@ package desingera;
  *
  * @author Daniela
  */
-public class DesingEra {
+public class MainDani_DesingEra {
 
     /**
      * Es el método principal del proyecto
@@ -19,6 +19,9 @@ public class DesingEra {
         System.out.println("Hola");
         System.out.println("Hola de nuevo");
         System.out.println("Probando cosas");
+        
+        Pantalla_DesingEra pantallita = new Pantalla_DesingEra();
+        pantallita.setVisible(true);
     }
     
 }
