@@ -8,7 +8,7 @@ package desingera;
  *
  * @author Daniela
  */
-public class MainDani_DesingEra {
+public class Main_DesingEra {
 
     /**
      * Es el método principal del proyecto

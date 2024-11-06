@@ -27,13 +27,13 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        nameDiseño = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setText("DesingEra");
-        getContentPane().add(jLabel1, java.awt.BorderLayout.PAGE_START);
+        nameDiseño.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        nameDiseño.setText("DesingEra");
+        getContentPane().add(nameDiseño, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -41,6 +41,6 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel nameDiseño;
     // End of variables declaration//GEN-END:variables
 }
