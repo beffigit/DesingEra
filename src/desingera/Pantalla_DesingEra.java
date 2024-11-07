@@ -16,6 +16,7 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
      */
     public Pantalla_DesingEra() {
         initComponents();
+        setTitle("DesingEra");
     }
 
     /**
@@ -31,9 +32,8 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nameDiseño.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        nameDiseño.setText("DesingEra");
-        getContentPane().add(nameDiseño, java.awt.BorderLayout.PAGE_START);
+        nameDiseño.setIcon(new javax.swing.ImageIcon(getClass().getResource("/desingera/diseño/logo.png"))); // NOI18N
+        getContentPane().add(nameDiseño, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

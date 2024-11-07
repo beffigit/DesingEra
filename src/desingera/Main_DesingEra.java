@@ -20,8 +20,13 @@ public class Main_DesingEra {
         System.out.println("Hola de nuevo");
         System.out.println("Probando cosas");
         
+        //creamos tes objetos de las clases
         Pantalla_DesingEra pantallita = new Pantalla_DesingEra();
-        pantallita.setVisible(true);
+        Modelo_DesingEra ModeloRef = new Modelo_DesingEra();
+        Jefe_DesingEra jefazo = new Jefe_DesingEra(ModeloRef,pantallita);
+        
+        //hacemos una llamada de la clase controlador utilizando el método creado.
+        jefazo.iniciandoJefazo();
     }
     
 }

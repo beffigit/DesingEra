@@ -13,5 +13,17 @@ public class Modelo_DesingEra {
      * Es el método secundario del proyecto
      * 
      */
+    private String titulo;
+    
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    
     
 }
