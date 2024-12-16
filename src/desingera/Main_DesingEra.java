@@ -4,6 +4,10 @@
  */
 package desingera;
 
+import desingera.controlador.Jefe_DesingEra;
+import desingera.vista.Pantalla_DesingEra;
+import desingera.modelo.Modelo_DesingEra;
+
 /**
  *
  * @author Daniela
