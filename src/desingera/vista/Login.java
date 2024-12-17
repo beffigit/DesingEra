@@ -9,12 +9,15 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author danie
+ * @author daniela
  */
 public class Login extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
+     * Constructor de la clase Login, que representa un inicio de sesión.
+     * Inicializa la ventana de inicio de sesión con propiedades que le hemos dado
+     * y configura el botón de registro para cambiar a la ventana principal.
+     * 
      */
     public Login() {
         initComponents();
@@ -32,12 +35,15 @@ public class Login extends javax.swing.JFrame {
     }
 
     
+    /**
+     * Método para abrir la ventana principal de la aplicación.
+     * Cierra la ventana actual y muestra la nueva ventana (Principal_DesingEra).
+     */
       private void abrirVentanaPrincipal() {
         // Crear una instancia de Principal_DesingEra
         Principal_DesingEra principal = new Principal_DesingEra();
         principal.setVisible(true); // Mostrar la nueva ventana
 
-        // Cerrar la ventana actual (Login)
         dispose();
     }
 

@@ -8,12 +8,16 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author danie
+ * @author daniela
  */
 public class VentanaConfig_DesingEra extends javax.swing.JDialog {
 
     /**
-     * Creates new form VentanaConfig_DesingEra
+     * Constructor de la clase VentanaConfig_DesingEra, inicializa la ventana JDialog 
+     * con todas las propiedades que tenga.
+     * @param parent La ventana principal (de tipo java.awt.Frame) que actúa como padre de este diálogo.
+     * @param modal  Un booleano que indica si el diálogo debe ser modal.
+     * Si es `true`, bloquea la interacción con la ventana principal mientras este diálogo esté abierto.
      */
     public VentanaConfig_DesingEra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -42,6 +46,8 @@ public class VentanaConfig_DesingEra extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        PanelBotones.setBackground(new java.awt.Color(0, 103, 41));
+
         btnOk.setText("OK");
         PanelBotones.add(btnOk);
 
@@ -49,6 +55,8 @@ public class VentanaConfig_DesingEra extends javax.swing.JDialog {
         PanelBotones.add(btnCancelar);
 
         getContentPane().add(PanelBotones, java.awt.BorderLayout.PAGE_END);
+
+        panelCentral.setBackground(new java.awt.Color(0, 103, 41));
 
         jLabel1.setText("¿Desea insertar nuevos productos?");
 
@@ -116,6 +124,7 @@ public class VentanaConfig_DesingEra extends javax.swing.JDialog {
     */
     public void addActionListenerbtnCancelar(ActionListener l){
         btnCancelar.addActionListener(l);
+        //System.out.println("Has pulsado --> botón Cancelar");
     }
     /**
     * Doy control selectivo, sólo a la capacidad de escuchar.

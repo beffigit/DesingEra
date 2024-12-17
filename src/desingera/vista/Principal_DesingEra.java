@@ -11,12 +11,14 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author danie
+ * @author daniela
  */
 public class Principal_DesingEra extends javax.swing.JFrame {
 
     /**
-     * Creates new form Principal_DesingEra
+     * Constructor de la clase Principal_DesingEra.
+     * Inicializa los componentes gráficos, establece el tamaño y posición de la ventana,
+     * y añade los listeners para los botones.
      */
     public Principal_DesingEra() {
         initComponents();
@@ -24,7 +26,7 @@ public class Principal_DesingEra extends javax.swing.JFrame {
         setLocationRelativeTo(null); // Centrar la ventana
         
      
-        jButton1.addActionListener(new ActionListener() {
+        btnSala.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("---> Sala de estar");
@@ -32,7 +34,7 @@ public class Principal_DesingEra extends javax.swing.JFrame {
             }
         });
 
-        jButton2.addActionListener(new ActionListener() {
+        btnCocinaa.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("---> Cocina");
@@ -40,7 +42,7 @@ public class Principal_DesingEra extends javax.swing.JFrame {
             }
         });
 
-        jButton3.addActionListener(new ActionListener() {
+        btnHabitacion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("---> Habitaciones");
@@ -48,7 +50,7 @@ public class Principal_DesingEra extends javax.swing.JFrame {
             }
         });
 
-        jButton4.addActionListener(new ActionListener() {
+        btnBañoo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("---> Baño");
@@ -60,8 +62,11 @@ public class Principal_DesingEra extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("---> Configuración");
+                abrirVentanaConfiguracion();
             }
         });
+         
+       
     }
 
     
@@ -69,8 +74,8 @@ public class Principal_DesingEra extends javax.swing.JFrame {
     // Método para mostrar la imagen en el JLabel
     private void mostrarImagen(String rutaImagen) {
         ImageIcon icono = new ImageIcon(getClass().getResource(rutaImagen));
-        Image imagen = icono.getImage().getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_SMOOTH);
-        jLabel1.setIcon(new ImageIcon(imagen));
+        Image imagen = icono.getImage().getScaledInstance(LabelFotos.getWidth(), LabelFotos.getHeight(), Image.SCALE_SMOOTH);
+        LabelFotos.setIcon(new ImageIcon(imagen));
     }
 
     /**
@@ -84,13 +89,13 @@ public class Principal_DesingEra extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnSala = new javax.swing.JButton();
+        btnCocinaa = new javax.swing.JButton();
+        btnHabitacion = new javax.swing.JButton();
+        btnBañoo = new javax.swing.JButton();
         jToolBar2 = new javax.swing.JToolBar();
         btnConfig = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LabelFotos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 103, 41));
@@ -101,29 +106,29 @@ public class Principal_DesingEra extends javax.swing.JFrame {
         jToolBar1.setBackground(new java.awt.Color(0, 103, 41));
         jToolBar1.setRollover(true);
 
-        jButton1.setText("Sala de Estar");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton1);
+        btnSala.setText("Sala de Estar");
+        btnSala.setFocusable(false);
+        btnSala.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSala.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnSala);
 
-        jButton2.setText("Cocina");
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton2);
+        btnCocinaa.setText("Cocina");
+        btnCocinaa.setFocusable(false);
+        btnCocinaa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCocinaa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnCocinaa);
 
-        jButton3.setText("Habitaciones");
-        jButton3.setFocusable(false);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton3);
+        btnHabitacion.setText("Habitaciones");
+        btnHabitacion.setFocusable(false);
+        btnHabitacion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHabitacion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnHabitacion);
 
-        jButton4.setText("Cuarto de Baño");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton4);
+        btnBañoo.setText("Cuarto de Baño");
+        btnBañoo.setFocusable(false);
+        btnBañoo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnBañoo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnBañoo);
 
         jPanel1.add(jToolBar1, java.awt.BorderLayout.PAGE_START);
 
@@ -136,21 +141,33 @@ public class Principal_DesingEra extends javax.swing.JFrame {
         jToolBar2.add(btnConfig);
 
         jPanel1.add(jToolBar2, java.awt.BorderLayout.PAGE_END);
-        jPanel1.add(jLabel1, java.awt.BorderLayout.CENTER);
+        jPanel1.add(LabelFotos, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Método que abre la ventana de configuración.
+     * Utiliza un JDialog para mostrar una ventana secundaria modal.
+     */
+     
+    private void abrirVentanaConfiguracion() {
+    // Crear una instancia de la ventana JDialog
+    VentanaConfig_DesingEra ventanaConfig = new VentanaConfig_DesingEra(this, true);
+    
+    // Hacerla visible
+    ventanaConfig.setVisible(true);
+}
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelFotos;
+    private javax.swing.JButton btnBañoo;
+    private javax.swing.JButton btnCocinaa;
     private javax.swing.JButton btnConfig;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnHabitacion;
+    private javax.swing.JButton btnSala;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JToolBar jToolBar2;

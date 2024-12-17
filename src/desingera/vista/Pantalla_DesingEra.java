@@ -4,7 +4,6 @@
  */
 package desingera.vista;
 
-import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.Timer;
@@ -29,8 +28,8 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setResizable(false); // Evita que la ventana se redimensione
         
-     // Crear un temporizador que cierre la ventana después de 5 segundos (5000 milisegundos)
-        Timer timer = new Timer(5000, e -> {
+     // Crear un temporizador que cierre la ventana después de 3 segundos 
+        Timer timer = new Timer(3000, e -> {
         dispose(); // Cierra la ventana actual
         System.out.println("Ventana cerrada automáticamente."); // Mensaje opcional
         
@@ -50,17 +49,17 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
         // Cargar la imagen desde la carpeta "desingera.diseño" en tu proyecto
         ImageIcon icono = new ImageIcon(getClass().getResource("/desingera/diseño/logo2.png"));
         
-        // Especificar tamaño mediano (ancho y alto) de la imagen
-            int ancho = 600; // Ancho deseado
-            int alto = 600;  // Alto deseado
+        // Especificar tamaño(ancho y alto) de la imagen
+            int ancho = 600; 
+            int alto = 600; 
 
-        // Escalar la imagen al tamaño mediano
+        // Escalar la imagen al tamaño
             Image imagenEscalada = icono.getImage().getScaledInstance(
             ancho, alto, Image.SCALE_SMOOTH
             );
         
         // Poner la imagen escalada en el JLabel
-        jLabel1.setIcon(new ImageIcon(imagenEscalada));
+        LabelFoto.setIcon(new ImageIcon(imagenEscalada));
     }
 
     /**
@@ -72,12 +71,12 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        LabelFoto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/desingera/diseño/logo2.png"))); // NOI18N
-        getContentPane().add(jLabel1, java.awt.BorderLayout.CENTER);
+        LabelFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/desingera/diseño/logo2.png"))); // NOI18N
+        getContentPane().add(LabelFoto, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -85,6 +84,6 @@ public class Pantalla_DesingEra extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel LabelFoto;
     // End of variables declaration//GEN-END:variables
 }
